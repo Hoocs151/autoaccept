@@ -56,7 +56,7 @@ def run_auto_accept():
         except:
             LOGGER.error("Không thể chấp nhận trận đấu")
             break
-    LOGGER.info("Auto accept đang chạy.")
+    LOGGER.info("Auto accept đang chạy..")
 
 
 if __name__ == "__main__":

@@ -1,24 +1,20 @@
-# Auto Accept for League of Legends
+# Auto Accept Matchmaking
 
-This script is used for auto accepting ready checks in League of Legends. It works by detecting the LeagueClientUx.exe process and retrieving the authentication key and port number to send a POST request to the ready check accept endpoint.
+Đây là đoạn code giúp tự động chấp nhận trận đấu trong trò chơi League of Legends.
 
-## Requirements
+## Cách sử dụng
+
+- Chạy trò chơi League of Legends.
+- Chạy đoạn code trên.
+- Nếu thành công, bạn sẽ nhận được thông báo "Auto accept đang chạy".
+- Khi có thông báo chấp nhận trận đấu, đoạn code sẽ tự động chấp nhận và hiển thị thông báo "Auto accept đang chạy.".
+
+## Yêu cầu
 
 - Python 3.x
-- `requests` library
-- `base64` library
-- `os` library
-- `time` library
-- `urllib3` library
-- `logging` library
+- Cài đặt các thư viện: `os`, `base64`, `requests`, `time`, `urllib3`, `logging`.
 
-## Usage
+## Lưu ý
 
-- Make sure League of Legends is running.
-- Run the script in the terminal using `python auto_accept.py`
-- The script will automatically accept any ready checks that appear.
-
-## Notes
-
-- This script is for educational purposes only and should not be used to gain an unfair advantage in the game.
-- The script may not work if Riot Games changes the authentication method or endpoint for ready check acceptance.
+- Đoạn code chỉ hoạt động khi trò chơi League of Legends đang chạy.
+- Nếu không thể chấp nhận trận đấu, đoạn code sẽ hiển thị thông báo "Không thể chấp nhận trận đấu".

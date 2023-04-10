@@ -27,7 +27,7 @@ def get_key_and_port():
         port = result.split("app-port=")[2].split('"')[0]
         return key, port
     except:
-        LOGGER.error("Không thể lấy được key và port")
+        LOGGER.error("startKhông thể lấy được key và port")
         return None, None
 
 

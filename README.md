@@ -1,20 +1,31 @@
-# Auto Accept Matchmaking
+# League of Legends Auto Accept
 
-Đây là đoạn code giúp tự động chấp nhận trận đấu trong trò chơi League of Legends.
+This Python script automates the process of accepting match invitations in League of Legends client.
 
-## Cách sử dụng
-
-- Chạy trò chơi League of Legends.
-- Chạy đoạn code trên.
-- Nếu thành công, bạn sẽ nhận được thông báo "Auto accept đang chạy".
-- Khi có thông báo chấp nhận trận đấu, đoạn code sẽ tự động chấp nhận và hiển thị thông báo "Auto accept đang chạy.".
-
-## Yêu cầu
+## Prerequisites
 
 - Python 3.x
-- Cài đặt các thư viện: `os`, `base64`, `requests`, `time`, `urllib3`, `logging`.
+- Requests library (`pip install requests`)
 
-## Lưu ý
+## Usage
 
-- Đoạn code chỉ hoạt động khi trò chơi League of Legends đang chạy.
-- Nếu không thể chấp nhận trận đấu, đoạn code sẽ hiển thị thông báo "Không thể chấp nhận trận đấu".
+1. Make sure League of Legends client is running.
+2. Run the Python script.
+3. The script will continuously monitor for match invitations and automatically accept them.
+
+## How it works
+
+The script utilizes the Riot Games API to monitor for match invitations. It retrieves the necessary authentication key and port from the LeagueClientUx process using `wmic` command in Windows. Then, it sends a POST request to the `/lol-matchmaking/v1/ready-check/accept` endpoint with the obtained authorization header to accept match invitations.
+
+## Disclaimer
+
+This script interacts with the League of Legends client and uses its API. Use it responsibly and at your own risk. The script author is not responsible for any actions taken with this script.
+
+## Troubleshooting
+
+- If the script fails to run, make sure League of Legends client is running and try again.
+- Ensure that the necessary dependencies are installed.
+
+## Contributions
+
+Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or create a pull request.
